@@ -1,19 +1,19 @@
 {
   "repository": "https://github.com/complexdatacollective/network-canvas-monorepo",
-  "commit": "9e3a21b5fa2d0c1d9a2274ca02f3ab91b2942adc",
+  "commit": "33a3e319759934d40ab6eb8c88b05291b5345a85",
   "sourceDirectory": "apps/template-registry/spec",
   "files": {
     "LICENSE": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
     "README.md": "9ddab41ab2904f772b04c79db7f6a048e5d2fed03959cf5ca3f50ba32921d8ba",
-    "openapi.json": "20b13a561f0c9d96c24bd23d6a1bed9550babcf4cc83baa257e12a85b9279932",
-    "openapi-3.0.json": "32e0a982cf461c7f7633ab5c3c92466f7e31f50402161d389fbd6f91d6b8902d",
+    "openapi.json": "92d280095a1a98d43de6b0f01f9fa2976d773ba4655bbf4a8f2a0203346ac3e6",
+    "openapi-3.0.json": "6f553c34622c5427260a00c9e09eee66fabc95b02d28eead2e1c7b71a439308e",
     "template-exchange-v1.md": "24eb9f59aa20d5a47a2676a814de474381f0e6ba594a7ff7aeb3b758b54f231d"
   },
   "validation": {
     "openapiRegeneration": "no artifact drift",
     "pythonClient": "openapi-python-client 0.29.0: generated without warnings; actual localhost query, pagination, binary download and null publisher account response passed",
     "templateFormatTests": "58 exchange tests passed, including the strict constant-space CSV grammar, recursive finite numeric values, unambiguous reusable subjects, duplicate members and GeoJSON structures",
-    "registryContractTests": "90 contract, 475 Registry server tests with one fixture-specific prepared-transaction case skipped, and 14 account tests passed; decimal report cursors, explicit token scopes, HTTPS related links, null publisher compatibility, paged recovery keepalives, exact publication filters, moderation retry report preservation and strict entry ownership reconciliation"
+    "registryContractTests": "91 contract, 475 Registry server tests with one fixture-specific prepared-transaction case skipped, and 14 account tests passed; decimal report cursors, explicit token scopes, HTTPS related links, null publisher compatibility, paged recovery keepalives, exact publication filters, moderation retry report preservation, strict entry ownership reconciliation, strict UUID endings and UTF-16 search limits"
   },
   "hashAlgorithm": "sha256",
   "hashInput": "Raw file bytes at each relative path; no normalization or Git object header."
