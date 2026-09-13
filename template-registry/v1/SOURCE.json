@@ -1,12 +1,12 @@
 {
   "repository": "https://github.com/complexdatacollective/network-canvas-monorepo",
-  "commit": "0f01717671f69be1337bd60dc7a47bf1ec40883b",
+  "commit": "dbefa9a06f78a506e9b1751de7c94307a0a5f75a",
   "sourceDirectory": "apps/template-registry/spec",
   "files": {
     "LICENSE": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
     "README.md": "9ddab41ab2904f772b04c79db7f6a048e5d2fed03959cf5ca3f50ba32921d8ba",
-    "openapi.json": "52c9a81adde1f7ffb3bed7c89865cca8e12f45c4c5c4144cfbdbc93aa8983a9e",
-    "openapi-3.0.json": "2fe4219005088f185e3013f266ea809ef2ed9fdf6b1a58b36df2617391a8b4db",
+    "openapi.json": "2ad406adc3ab8663c26dd63ad8fae4343120dc32c807b92fa5e5748444fc300a",
+    "openapi-3.0.json": "c605331744e2422a3d11b869e660db5bcf38269126cb93dcf91afcafae0ae78a",
     "template-exchange-v1.md": "24eb9f59aa20d5a47a2676a814de474381f0e6ba594a7ff7aeb3b758b54f231d"
   },
   "validation": {
