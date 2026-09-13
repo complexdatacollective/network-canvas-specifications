@@ -46,7 +46,9 @@
           },
           "query": {
             "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "maxLength": 200,
+            "pattern": "^[^\\u0000]+$(?![\\s\\S])"
           },
           "kind": {
             "type": "string",
@@ -64,11 +66,15 @@
           },
           "keyword": {
             "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "maxLength": 100,
+            "pattern": "^[^\\u0000]+$(?![\\s\\S])"
           },
           "author": {
             "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "maxLength": 200,
+            "pattern": "^[^\\u0000]+$(?![\\s\\S])"
           },
           "curated": {
             "type": "string",
@@ -349,12 +355,14 @@
                     "name": {
                       "type": "string",
                       "minLength": 1,
-                      "maxLength": 200
+                      "maxLength": 200,
+                      "pattern": "^(?=[\\s\\S]*\\S)[\\s\\S]+$(?![\\s\\S])"
                     },
                     "affiliation": {
                       "type": "string",
                       "minLength": 1,
-                      "maxLength": 500
+                      "maxLength": 500,
+                      "pattern": "^(?=[\\s\\S]*\\S)[\\s\\S]+$(?![\\s\\S])"
                     },
                     "orcid": {
                       "type": "string",
@@ -371,13 +379,15 @@
                 "items": {
                   "type": "string",
                   "minLength": 1,
-                  "maxLength": 100
+                  "maxLength": 100,
+                  "pattern": "^(?=[\\s\\S]*\\S)[\\s\\S]+$(?![\\s\\S])"
                 }
               },
               "description": {
                 "type": "string",
                 "minLength": 1,
-                "maxLength": 20000
+                "maxLength": 20000,
+                "pattern": "^(?=[\\s\\S]*\\S)[\\s\\S]+$(?![\\s\\S])"
               },
               "publications": {
                 "maxItems": 100,
@@ -388,13 +398,14 @@
                     "doi": {
                       "type": "string",
                       "minLength": 1,
-                      "maxLength": 255,
-                      "pattern": "^10\\.\\d{4,9}\\/[^\\s]+$"
+                      "pattern": "^10\\.\\d{4,9}\\/[^\\s]+$",
+                      "maxLength": 255
                     },
                     "citation": {
                       "type": "string",
                       "minLength": 1,
-                      "maxLength": 4000
+                      "maxLength": 4000,
+                      "pattern": "^(?=[\\s\\S]*\\S)[\\s\\S]+$(?![\\s\\S])"
                     },
                     "relation": {
                       "type": "string",
@@ -413,14 +424,16 @@
                   "properties": {
                     "url": {
                       "type": "string",
-                      "maxLength": 2048,
+                      "minLength": 1,
                       "pattern": "^[Hh][Tt][Tt][Pp][Ss]:\\/\\/",
+                      "maxLength": 2048,
                       "description": "WHATWG HTTPS URL with a nonempty authority and no username, password, or backslash; internationalized hostnames are permitted."
                     },
                     "label": {
                       "type": "string",
                       "minLength": 1,
-                      "maxLength": 200
+                      "maxLength": 200,
+                      "pattern": "^(?=[\\s\\S]*\\S)[\\s\\S]+$(?![\\s\\S])"
                     }
                   },
                   "required": ["url"],
@@ -430,7 +443,8 @@
               "funding": {
                 "type": "string",
                 "minLength": 1,
-                "maxLength": 4000
+                "maxLength": 4000,
+                "pattern": "^(?=[\\s\\S]*\\S)[\\s\\S]+$(?![\\s\\S])"
               }
             },
             "required": ["schema_version"],
@@ -438,11 +452,13 @@
           },
           "artifact_url": {
             "type": "string",
-            "format": "uri"
+            "pattern": "^https?:\\/\\/",
+            "description": "Absolute HTTP(S) Registry GET URL for the artifact identified by this entry root; no user information or fragment."
           },
           "report_url": {
             "type": "string",
-            "format": "uri"
+            "pattern": "^https?:\\/\\/",
+            "description": "Absolute HTTP(S) Registry POST URL for reports targeting this entry ID; no user information or fragment."
           }
         },
         "required": [
@@ -545,12 +561,14 @@
                     "name": {
                       "type": "string",
                       "minLength": 1,
-                      "maxLength": 200
+                      "maxLength": 200,
+                      "pattern": "^(?=[\\s\\S]*\\S)[\\s\\S]+$(?![\\s\\S])"
                     },
                     "affiliation": {
                       "type": "string",
                       "minLength": 1,
-                      "maxLength": 500
+                      "maxLength": 500,
+                      "pattern": "^(?=[\\s\\S]*\\S)[\\s\\S]+$(?![\\s\\S])"
                     },
                     "orcid": {
                       "type": "string",
@@ -567,13 +585,15 @@
                 "items": {
                   "type": "string",
                   "minLength": 1,
-                  "maxLength": 100
+                  "maxLength": 100,
+                  "pattern": "^(?=[\\s\\S]*\\S)[\\s\\S]+$(?![\\s\\S])"
                 }
               },
               "description": {
                 "type": "string",
                 "minLength": 1,
-                "maxLength": 20000
+                "maxLength": 20000,
+                "pattern": "^(?=[\\s\\S]*\\S)[\\s\\S]+$(?![\\s\\S])"
               },
               "publications": {
                 "maxItems": 100,
@@ -584,13 +604,14 @@
                     "doi": {
                       "type": "string",
                       "minLength": 1,
-                      "maxLength": 255,
-                      "pattern": "^10\\.\\d{4,9}\\/[^\\s]+$"
+                      "pattern": "^10\\.\\d{4,9}\\/[^\\s]+$",
+                      "maxLength": 255
                     },
                     "citation": {
                       "type": "string",
                       "minLength": 1,
-                      "maxLength": 4000
+                      "maxLength": 4000,
+                      "pattern": "^(?=[\\s\\S]*\\S)[\\s\\S]+$(?![\\s\\S])"
                     },
                     "relation": {
                       "type": "string",
@@ -609,14 +630,16 @@
                   "properties": {
                     "url": {
                       "type": "string",
-                      "maxLength": 2048,
+                      "minLength": 1,
                       "pattern": "^[Hh][Tt][Tt][Pp][Ss]:\\/\\/",
+                      "maxLength": 2048,
                       "description": "WHATWG HTTPS URL with a nonempty authority and no username, password, or backslash; internationalized hostnames are permitted."
                     },
                     "label": {
                       "type": "string",
                       "minLength": 1,
-                      "maxLength": 200
+                      "maxLength": 200,
+                      "pattern": "^(?=[\\s\\S]*\\S)[\\s\\S]+$(?![\\s\\S])"
                     }
                   },
                   "required": ["url"],
@@ -626,7 +649,8 @@
               "funding": {
                 "type": "string",
                 "minLength": 1,
-                "maxLength": 4000
+                "maxLength": 4000,
+                "pattern": "^(?=[\\s\\S]*\\S)[\\s\\S]+$(?![\\s\\S])"
               }
             },
             "required": ["schema_version"],
@@ -634,11 +658,13 @@
           },
           "artifact_url": {
             "type": "string",
-            "format": "uri"
+            "pattern": "^https?:\\/\\/",
+            "description": "Absolute HTTP(S) Registry GET URL for the artifact identified by this entry root; no user information or fragment."
           },
           "report_url": {
             "type": "string",
-            "format": "uri"
+            "pattern": "^https?:\\/\\/",
+            "description": "Absolute HTTP(S) Registry POST URL for reports targeting this entry ID; no user information or fragment."
           }
         },
         "required": [
@@ -1299,7 +1325,8 @@
             "schema": {
               "type": "string",
               "minLength": 1,
-              "maxLength": 200
+              "maxLength": 200,
+              "pattern": "^[^\\u0000]+$(?![\\s\\S])"
             },
             "allowEmptyValue": false,
             "allowReserved": false
@@ -1336,7 +1363,8 @@
             "schema": {
               "type": "string",
               "minLength": 1,
-              "maxLength": 100
+              "maxLength": 100,
+              "pattern": "^[^\\u0000]+$(?![\\s\\S])"
             },
             "allowEmptyValue": false,
             "allowReserved": false
@@ -1347,7 +1375,8 @@
             "schema": {
               "type": "string",
               "minLength": 1,
-              "maxLength": 200
+              "maxLength": 200,
+              "pattern": "^[^\\u0000]+$(?![\\s\\S])"
             },
             "allowEmptyValue": false,
             "allowReserved": false
@@ -1396,10 +1425,12 @@
                       "type": "object",
                       "properties": {
                         "data": {
+                          "maxItems": 100,
                           "type": "array",
                           "items": {
                             "$ref": "#/components/schemas/EntrySummary"
-                          }
+                          },
+                          "description": "At most the requested limit, never more than 100 items."
                         },
                         "next_cursor": {
                           "type": "string",
@@ -1419,10 +1450,12 @@
                       "type": "object",
                       "properties": {
                         "data": {
+                          "maxItems": 100,
                           "type": "array",
                           "items": {
                             "$ref": "#/components/schemas/EntrySummary"
-                          }
+                          },
+                          "description": "At most the requested limit, never more than 100 items."
                         },
                         "next_cursor": {
                           "type": "string",
@@ -1567,6 +1600,7 @@
       "post": {
         "operationId": "publish",
         "summary": "Publish a verified template artifact",
+        "description": "A newly created entry has yanked=false. Repeating publication of the same artifact for the same publisher is idempotent: it returns the existing entry and preserves its current withdrawal state, including yanked=true. Publication never reverses a withdrawal.",
         "requestBody": {
           "required": true,
           "content": {
@@ -3404,6 +3438,7 @@
       "delete": {
         "operationId": "revokeToken",
         "summary": "Revoke a registry credential",
+        "description": "Requires a verified registry session whose account owns the targeted credential. A credential belonging to another account is not accessible or revocable through this operation.",
         "parameters": [
           {
             "in": "path",
@@ -4514,6 +4549,7 @@
                       "type": "object",
                       "properties": {
                         "data": {
+                          "maxItems": 100,
                           "type": "array",
                           "items": {
                             "type": "object",
@@ -4524,6 +4560,15 @@
                                 "pattern": "^(?:[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$(?![\\s\\S])"
                               },
                               "entry_id": {
+                                "type": "string",
+                                "format": "uuid",
+                                "pattern": "^(?:[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$(?![\\s\\S])"
+                              },
+                              "artifact_root": {
+                                "type": "string",
+                                "pattern": "^[0-9a-f]{64}$(?![\\s\\S])"
+                              },
+                              "publisher_id": {
                                 "type": "string",
                                 "format": "uuid",
                                 "pattern": "^(?:[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$(?![\\s\\S])"
@@ -4562,12 +4607,15 @@
                             "required": [
                               "id",
                               "entry_id",
+                              "artifact_root",
+                              "publisher_id",
                               "category",
                               "details",
                               "created_at"
                             ],
                             "additionalProperties": false
-                          }
+                          },
+                          "description": "At most the requested limit, never more than 100 items."
                         },
                         "next_cursor": {
                           "type": "string",
@@ -4586,6 +4634,7 @@
                       "type": "object",
                       "properties": {
                         "data": {
+                          "maxItems": 100,
                           "type": "array",
                           "items": {
                             "type": "object",
@@ -4596,6 +4645,15 @@
                                 "pattern": "^(?:[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$(?![\\s\\S])"
                               },
                               "entry_id": {
+                                "type": "string",
+                                "format": "uuid",
+                                "pattern": "^(?:[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$(?![\\s\\S])"
+                              },
+                              "artifact_root": {
+                                "type": "string",
+                                "pattern": "^[0-9a-f]{64}$(?![\\s\\S])"
+                              },
+                              "publisher_id": {
                                 "type": "string",
                                 "format": "uuid",
                                 "pattern": "^(?:[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$(?![\\s\\S])"
@@ -4634,12 +4692,15 @@
                             "required": [
                               "id",
                               "entry_id",
+                              "artifact_root",
+                              "publisher_id",
                               "category",
                               "details",
                               "created_at"
                             ],
                             "additionalProperties": false
-                          }
+                          },
+                          "description": "At most the requested limit, never more than 100 items."
                         },
                         "next_cursor": {
                           "type": "string",
@@ -5759,6 +5820,7 @@
                       "type": "object",
                       "properties": {
                         "data": {
+                          "maxItems": 100,
                           "type": "array",
                           "items": {
                             "type": "object",
@@ -5769,6 +5831,15 @@
                                 "pattern": "^(?:[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$(?![\\s\\S])"
                               },
                               "entry_id": {
+                                "type": "string",
+                                "format": "uuid",
+                                "pattern": "^(?:[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$(?![\\s\\S])"
+                              },
+                              "artifact_root": {
+                                "type": "string",
+                                "pattern": "^[0-9a-f]{64}$(?![\\s\\S])"
+                              },
+                              "publisher_id": {
                                 "type": "string",
                                 "format": "uuid",
                                 "pattern": "^(?:[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$(?![\\s\\S])"
@@ -5807,12 +5878,15 @@
                             "required": [
                               "id",
                               "entry_id",
+                              "artifact_root",
+                              "publisher_id",
                               "category",
                               "details",
                               "created_at"
                             ],
                             "additionalProperties": false
-                          }
+                          },
+                          "description": "At most the requested limit, never more than 100 items."
                         },
                         "next_cursor": {
                           "type": "string",
@@ -5831,6 +5905,7 @@
                       "type": "object",
                       "properties": {
                         "data": {
+                          "maxItems": 100,
                           "type": "array",
                           "items": {
                             "type": "object",
@@ -5841,6 +5916,15 @@
                                 "pattern": "^(?:[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$(?![\\s\\S])"
                               },
                               "entry_id": {
+                                "type": "string",
+                                "format": "uuid",
+                                "pattern": "^(?:[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$(?![\\s\\S])"
+                              },
+                              "artifact_root": {
+                                "type": "string",
+                                "pattern": "^[0-9a-f]{64}$(?![\\s\\S])"
+                              },
+                              "publisher_id": {
                                 "type": "string",
                                 "format": "uuid",
                                 "pattern": "^(?:[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$(?![\\s\\S])"
@@ -5879,12 +5963,15 @@
                             "required": [
                               "id",
                               "entry_id",
+                              "artifact_root",
+                              "publisher_id",
                               "category",
                               "details",
                               "created_at"
                             ],
                             "additionalProperties": false
-                          }
+                          },
+                          "description": "At most the requested limit, never more than 100 items."
                         },
                         "next_cursor": {
                           "type": "string",
