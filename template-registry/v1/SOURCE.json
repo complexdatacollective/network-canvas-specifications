@@ -1,19 +1,19 @@
 {
   "repository": "https://github.com/complexdatacollective/network-canvas-monorepo",
-  "commit": "c9f547f41b5ad37d4d8785b04e5e7dc7a339150e",
+  "commit": "da2a83c2cd9018e0b2611905dcea4d4a91f7aeda",
   "sourceDirectory": "apps/template-registry/spec",
   "files": {
     "LICENSE": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
     "README.md": "9ddab41ab2904f772b04c79db7f6a048e5d2fed03959cf5ca3f50ba32921d8ba",
-    "openapi.json": "66467377bafdc47d6c69479e9de0c26425a6495fc295e396d55f4f3d15d5fc14",
-    "openapi-3.0.json": "16de460b0d1f9f1a1e1b1b1c2f602e4c64c5f4285a80b64fbd78ba1bd13a02cc",
-    "template-exchange-v1.md": "e4225dd084e0f42ea48b98145aeb6fee3c06b9d169bc0a578af93ac5a0c6ee14"
+    "openapi.json": "b8beb585db7bb7318debfdca7c1aed5af520e7993af52de97193963393aae69a",
+    "openapi-3.0.json": "cae7959a0e578b0d70f6602ae05382851beef26615888463c6b3586b0b791abd",
+    "template-exchange-v1.md": "c064bc2b84af510fbe951ed6e2ac2a0e7e5b2294a79335050e08f52f2deed4bc"
   },
   "validation": {
     "openapiRegeneration": "no artifact drift",
-    "pythonClient": "openapi-python-client 0.29.0 Python 3.12: generated without warnings; actual localhost reserved-character query, pagination and binary download passed",
-    "templateFormatTests": "55 exchange tests passed, including decoded duplicate members, recursive GeoJSON geometry and bbox semantics, and large valid coordinate arrays",
-    "registryContractTests": "89 passed; current exact root and publisher filters, required Origin on account writes, nonempty query values, integer versions, reserved-character encoding and nullable conversion"
+    "pythonClient": "openapi-python-client 0.29.0: generated without warnings; actual localhost query, pagination, binary download and null publisher account response passed",
+    "templateFormatTests": "57 exchange tests passed, including recursive finite numeric values, unambiguous reusable subjects, leading CSV markup exclusion, duplicate members and GeoJSON structures",
+    "registryContractTests": "90 contract and 32 PostgreSQL service tests passed; bounded response cursors, HTTPS related links, null publisher compatibility and exact publication filters"
   },
   "hashAlgorithm": "sha256",
   "hashInput": "Raw file bytes at each relative path; no normalization or Git object header."
