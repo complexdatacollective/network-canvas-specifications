@@ -1,19 +1,19 @@
 {
   "repository": "https://github.com/complexdatacollective/network-canvas-monorepo",
-  "commit": "dbefa9a06f78a506e9b1751de7c94307a0a5f75a",
+  "commit": "6a513ad89ef1b21448ab463d1ea214caf43e1726",
   "sourceDirectory": "apps/template-registry/spec",
   "files": {
     "LICENSE": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
     "README.md": "9ddab41ab2904f772b04c79db7f6a048e5d2fed03959cf5ca3f50ba32921d8ba",
-    "openapi.json": "2ad406adc3ab8663c26dd63ad8fae4343120dc32c807b92fa5e5748444fc300a",
-    "openapi-3.0.json": "c605331744e2422a3d11b869e660db5bcf38269126cb93dcf91afcafae0ae78a",
-    "template-exchange-v1.md": "24eb9f59aa20d5a47a2676a814de474381f0e6ba594a7ff7aeb3b758b54f231d"
+    "openapi.json": "766141ba0e78df6db85d70c2206480e626acfe805ae4179fe4b093de4dcf5136",
+    "openapi-3.0.json": "7d5b7eb3487118805a9c554a0603d50eee1ccd41f3b23cf4650b1bf942f83d66",
+    "template-exchange-v1.md": "11b1a415fac960ccd27717a87365edb32a56dcfaa89bc791e9f1b7a5eef7c87f"
   },
   "validation": {
     "openapiRegeneration": "no artifact drift",
-    "pythonClient": "openapi-python-client 0.29.0: generated without warnings; actual localhost query, pagination, binary download and null publisher account response passed",
-    "templateFormatTests": "58 exchange tests passed, including the strict constant-space CSV grammar, recursive finite numeric values, unambiguous reusable subjects, duplicate members and GeoJSON structures",
-    "registryContractTests": "92 contract, 475 Registry server tests with one fixture-specific prepared-transaction case skipped, and 14 account tests passed; decimal report cursors, explicit token scopes, HTTPS related links, null publisher compatibility, paged recovery keepalives, exact publication filters, moderation retry report preservation, strict entry ownership reconciliation, strict UUID endings and Unicode code-point search limits"
+    "pythonClient": "openapi-python-client 0.29.0: generated without warnings; actual localhost query, correlated pagination, binary download and null publisher account response passed",
+    "templateFormatTests": "59 exchange tests passed, including blank CSV records, strict constant-space CSV grammar, recursive finite numeric values, exact WHATWG HTTPS related-link parsing, duplicate members and GeoJSON dimensions and ring equality",
+    "registryContractTests": "94 contract tests passed; response-specific problem mappings, correlated pagination, exact credential and active-token response bounds, GET body omission, strict token and UUID endings, nonblank publishers, and Unicode code-point request limits are covered"
   },
   "hashAlgorithm": "sha256",
   "hashInput": "Raw file bytes at each relative path; no normalization or Git object header."
